@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Awesome Books With ES6</title>
   </head>
-
   <body>
-    <!--header start-->
-    <header class="container header">
-      <nav>
-        <ul class="header-menu">
-          <li class="header-menu-first">Awesome Books</li>
-          <li><a href="#list">List</a></li>
-          <li><a href="#add">Add new</a></li>
-          <li class="header-menu-last"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <time> 12th Feb 1992</time>
-    </header>
-    <!--header end-->
+    
+     <div class="wrapper">
+        <header>
+          <nav class="menu-bar">
+            <li class="logo">
+              <a href="#" class="logo-link">
+                Awesome Books
+              </a>
+            </li>
+            <ul class="menus">
+              
+              <li class="menu-item">
+                <a href="#list" class="menu-item-link list-anchor active">
+                  List
+                </a>
+              </li>
+              <li class="hor-line menu-item"></li>
+              <li class="menu-item">
+                <a href="#add-new" class="menu-item-link add-new-anchor">
+                  Add new
+                </a>
+              </li>
+              <li class="hor-line menu-item"></li>
+              <li class="menu-item">
+                <a href="#contact" class="menu-item-link contact-anchor">
+                  Contact
+                </a>
+              </li>           
 
-    <main>
+            </ul>
+          </nav>
+        </header> 
+        <div class="time"></div>
 
-      <!--list start-->
-      <section class="container content">
-        <h1>Awesome Books</h1>
-        <ul class="content-list"></ul>
-      </section>
-      <!--list end-->
+        <section id="list" class="book-list-section">
+          <h3>All Awesome Books</h3> 
+        
+          <div class="book-from-storage"> </div> 
+        </section>
 
-      <!--add start-->
-      <section class="container content">
-        <form class="content-form">
-          <h1>Add a new book</h1>
-          <input type="text" name="title" placeholder="Title" required>
-          <input type="text" name="author" placeholder="Author" required>
-          <button type="submit">Add</button>
-        </form>
-      </section>
-      <!--add end-->
+        <section id="add-new" class="add-new-section hidden">
+          <h3>Add a new book</h3>
 
-      <!--contact start-->
-      <section class="container content">
-        <h1>Contact Information</h1>
-        <p>Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
-        <ul class="content-contact">
-          <li>Our e-mail: mail@mail.com</li>
-          <li>Our phone number: 0043586534422</li>
-          <li>Our addres: Streetname 22, 84503 City, Country</li>
-        </ul>
-      </section>
-      <!--contact end-->
+          <div class="input-field">
+            <input type="text" placeholder="Title" class="title"/> 
+          <input type="text" placeholder="Author" class="author"/> 
+          </div>
+        
+          
+          <div class="btn-div">
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </section>
 
-    </main>
+        <section id="contact" class=" contact-section hidden">
+          <h2>Contact Information</h2>
+          <p>
+            Do you have any questions or you just want to say "Hello"? <br />
+            You can reach out to us!
+          </p>
+          <ul class="contact-ul">
+            <li class="contact-type">Our email: amaremek@gmail.com</li>
+            <li class="contact-type">Our phone number: +2519 13 85 03 28</li>
+            <li class="contact-type">Our address: Streetname 22. 84503 Addis Ababa, Ehtiopia</li>
+          </ul>
+        </section>
 
-    <!--footer start-->
-    <footer class="container">
-      <p class="footer">Copyright &hellip;</p>
-    </footer>
-    <!--footer end-->
-
-    <script src="script.js"></script>
-
+        <footer>
+          <div class="copyright">Copyright ...</div>
+        </footer>
+      
+     </div>
+  
+    <script type="module" src="./index.js"></script>
   </body>
-
 </html>

@@ -1,19 +1,8 @@
-// modules/book.js
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
 
-// Book module
-const createBook = (title, author) => {
-  let read = false;
-
-  const getTitle = () => title;
-  const getAuthor = () => author;
-  const isRead = () => read;
-  const toggleRead = () => {
-    read = !read;
-  };
-
-  return {
-    getTitle, getAuthor, isRead, toggleRead,
-  };
-};
-
-export default createBook;
+export default Book;

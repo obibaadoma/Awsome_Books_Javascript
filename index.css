@@ -1,150 +1,167 @@
-body {
-  height: 100vh;
-  display: flex;
-  gap: 15px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-html,
-body,
-h1,
-ul,
-p {
-  padding: 0;
+* {
+  box-sizing: border-box;
   margin: 0;
-}
-
-ul {
-  display: flex;
+  padding: 0;
+  text-decoration: none;
   list-style: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.2s ease;
+.wrapper {
+  width: 80%;
+  padding: 0 5px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-a:hover,
-.active {
-  color: #00f;
-}
-
-.container {
+header {
   width: 100%;
-  max-width: 500px;
-  padding: 10px;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
-.visible {
-  display: flex !important;
+.menu-bar {
+  width: 100%;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333;
 }
 
-.rotate {
-  transform: rotateY(0) !important;
+.logo {
+  width: 100%;
 }
 
-.header {
-  text-align: end;
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header-menu {
-  padding: 5px 0;
-  white-space: nowrap;
+.menu-item {
+  list-style: none;
+  width: 65px;
+}
+
+.menu-item-link,
+.logo-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  width: auto;
+}
+
+.hor-line {
+  width: 2px;
+  height: 20px;
+  background-color: rgb(35 39 41);
+  margin-right: 15px;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.book-list-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-new-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-div {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: flex-end;
-  border: 1px solid;
-  margin-bottom: 5px;
 }
 
-.header-menu li {
-  padding: 5px 10px;
-  border-inline-end: 1px solid;
+.add-btn {
+  border: 2px solid #444;
+  background-color: #fff;
 }
 
-.header-menu .header-menu-first,
-.header-menu .header-menu-last {
-  border: 0;
-}
-
-.header-menu .header-menu-first {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: auto;
-}
-
-.header time {
-  font-size: 0.8rem;
-}
-
-.footer {
-  padding: 10px;
-  border: 1px solid;
-}
-
-.content {
-  display: none;
-  gap: 15px;
-  flex-direction: column;
-  margin: 15px auto;
-  transition: all 0.5s ease;
-  transform: rotateY(90deg);
-}
-
-.content h1,
-.content-list h2 {
-  text-align: center;
-}
-
-.content-list {
-  flex-direction: column;
-  border: 1px solid;
-}
-
-.content-list h2 {
-  color: #aaa;
-}
-
-.content-list li {
+.contact-section {
   display: flex;
-  gap: 10px;
-  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-type {
+  list-style: disc;
+  margin-left: 50px;
+}
+
+.book-from-storage {
+  padding: 2px 5px;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.popped-books {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
-.content-list li:nth-child(odd) {
-  background-color: #ddd;
+.popped-books:nth-child(odd) {
+  background-color: #eee;
 }
 
-.content-list p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.popped-books .remove-btn {
+  border: 2px solid #567;
+  margin-bottom: 2px;
 }
 
-.content-form {
+h3 {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  color: blue;
+  font-weight: 700;
+}
+
+footer {
+  width: 80%;
+  border: 2px solid #333;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+
+.copy-right {
   width: 100%;
   display: flex;
-  gap: 15px;
-  text-align: center;
   flex-direction: column;
-  margin: auto;
-}
-
-.content-form input {
-  padding: 5px 10px;
-}
-
-.content-form button {
-  align-self: flex-end;
-}
-
-.content-contact {
-  display: block;
-  list-style: initial;
-  padding-inline-start: 20px;
-  margin-top: 15px;
+  align-items: center;
+  justify-content: flex-end;
 }
