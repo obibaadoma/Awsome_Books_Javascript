@@ -1,6 +1,6 @@
 import BookImplement from './modules/bookimplement.js';
 import Book from './modules/book.js';
-import { DateTime } from './modules/luxon.js';
+import { DateTime } from './node_modules/luxon/src/luxon.js';
 
 window.onload = () => {
   const time = document.querySelector('.time');
